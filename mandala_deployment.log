@@ -1,0 +1,205 @@
+mehdi@mehdi-VirtualBox:~/sandbox/olympus-contracts$ yarn deploy:mandala
+yarn run v1.22.10
+$ npx hardhat run scripts/deployAllMandala.ts --network mandalaPub
+No need to generate any newer typings.
+Deploying contracts with the account: 0x75E480dB528101a381Ce68544611C169Ad7EB342
+Deploying OlympusERC20Token after waiting 15000ms 
+Deploying OlympusERC20Token...
+Error deploying OlympusERC20Token
+Retrying deployment of OlympusERC20Token
+Deploying OlympusERC20Token after waiting 15000ms retryCount: 1
+Deploying OlympusERC20Token...
+Error deploying OlympusERC20Token
+Retrying deployment of OlympusERC20Token
+Deploying OlympusERC20Token after waiting 15000ms retryCount: 2
+Deploying OlympusERC20Token...
+Deployed OlympusERC20Token at 0x8627fF590930F4311dEF2b71169d9825A01D18Fb
+Waiting 5000ms for cooldown
+Deploying DAI after waiting 15000ms 
+Deploying DAI...
+Deployed DAI at 0xE10Be81C121fc5E9CFfFBfA2A3589a96021bD346
+Waiting 5000ms for cooldown
+Deploying FRAX after waiting 15000ms 
+Deploying FRAX...
+Error deploying FRAX
+Retrying deployment of FRAX
+Deploying FRAX after waiting 15000ms retryCount: 1
+Deploying FRAX...
+Error deploying FRAX
+Retrying deployment of FRAX
+Deploying FRAX after waiting 15000ms retryCount: 2
+Deploying FRAX...
+Deployed FRAX at 0x99076ca7b1E2B182fCeBA3d9FEccBF44742267bb
+Waiting 5000ms for cooldown
+Waiting 15000ms before transaction 
+Executing transaction dai.mint()...
+Transaction executed. Waiting 5000ms for cooldown
+Waiting 15000ms before transaction 
+Executing transaction frax.mint()...
+Transaction executed. Waiting 5000ms for cooldown
+Deploying MockOlympusTreasury after waiting 15000ms 
+Deploying MockOlympusTreasury...
+Deployed MockOlympusTreasury at 0x7307F7C6529fFD030211df227A2672540BC59962
+Waiting 5000ms for cooldown
+Deploying OlympusBondingCalculator after waiting 15000ms 
+Deploying OlympusBondingCalculator...
+Deployed OlympusBondingCalculator at 0x8C8767a341B10c0e039dDE5cB6D428A1d1673BAb
+Waiting 5000ms for cooldown
+Deploying Distributor after waiting 15000ms 
+Deploying Distributor...
+Error deploying Distributor
+Retrying deployment of Distributor
+Deploying Distributor after waiting 15000ms retryCount: 1
+Deploying Distributor...
+Deployed Distributor at 0x1656C2A37A5335d327b665756f44852E3672F251
+Waiting 5000ms for cooldown
+Deploying sOlympus after waiting 15000ms 
+Deploying sOlympus...
+Error deploying sOlympus
+Retrying deployment of sOlympus
+Deploying sOlympus after waiting 15000ms retryCount: 1
+Deploying sOlympus...
+Error deploying sOlympus
+Retrying deployment of sOlympus
+Deploying sOlympus after waiting 15000ms retryCount: 2
+Deploying sOlympus...
+Deployed sOlympus at 0x9507dc07b7c460cd8ee8b8908F062a4bA9018569
+Waiting 5000ms for cooldown
+Deploying OlympusStaking after waiting 15000ms 
+Deploying OlympusStaking...
+Deployed OlympusStaking at 0x56eCb0C2D7e1D0D7D0f79F4f97fd11F100Ed02D9
+Waiting 5000ms for cooldown
+Deploying StakingWarmup after waiting 15000ms 
+Deploying StakingWarmup...
+Error deploying StakingWarmup
+Retrying deployment of StakingWarmup
+Deploying StakingWarmup after waiting 15000ms retryCount: 1
+Deploying StakingWarmup...
+Error deploying StakingWarmup
+Retrying deployment of StakingWarmup
+Deploying StakingWarmup after waiting 15000ms retryCount: 2
+Deploying StakingWarmup...
+Deployed StakingWarmup at 0xB67Bb47A3fF2e49FE400E40dEDa01442Cfa62924
+Waiting 5000ms for cooldown
+Deploying StakingHelper after waiting 15000ms 
+Deploying StakingHelper...
+Deployed StakingHelper at 0x4D98350dbff0D57aC36fA5F1A3668C9474A600a4
+Waiting 5000ms for cooldown
+Deploying MockOlympusBondDepository after waiting 15000ms 
+Deploying MockOlympusBondDepository...
+Error deploying MockOlympusBondDepository
+Retrying deployment of MockOlympusBondDepository
+Deploying MockOlympusBondDepository after waiting 15000ms retryCount: 1
+Deploying MockOlympusBondDepository...
+Deployed MockOlympusBondDepository at 0x412131331282B0F3F6eC32Be6b3053daE83C7DaF
+Waiting 5000ms for cooldown
+Deploying MockOlympusBondDepository after waiting 15000ms 
+Deploying MockOlympusBondDepository...
+Deployed MockOlympusBondDepository at 0xf166Aa9dA66403430027eb2D069F74F80961f655
+Waiting 5000ms for cooldown
+Waiting 15000ms before transaction 
+Executing transaction treasury.queue(0,0x412131331282B0F3F6eC32Be6b3053daE83C7DaF)...
+Transaction executed. Waiting 5000ms for cooldown
+Waiting 15000ms before transaction 
+Executing transaction treasury.queue(0,0xf166Aa9dA66403430027eb2D069F74F80961f655)...
+Transaction executed. Waiting 5000ms for cooldown
+Waiting 15000ms before transaction 
+Executing transaction treasury.toggle(0,0x412131331282B0F3F6eC32Be6b3053daE83C7DaF)...
+Transaction executed. Waiting 5000ms for cooldown
+Waiting 15000ms before transaction 
+Executing transaction treasury.toggle(0,0xf166Aa9dA66403430027eb2D069F74F80961f655)...
+Transaction executed. Waiting 5000ms for cooldown
+Waiting 15000ms before transaction 
+Executing transaction daiBond.initializeBondTerms()...
+Transaction executed. Waiting 5000ms for cooldown
+Waiting 15000ms before transaction 
+Executing transaction fraxBond.initializeBondTerms...
+Transaction executed. Waiting 5000ms for cooldown
+Waiting 15000ms before transaction 
+Executing transaction daiBond.setStaking()...
+Transaction executed. Waiting 5000ms for cooldown
+Waiting 15000ms before transaction 
+Executing transaction fraxBond.setStaking()...
+Transaction executed. Waiting 5000ms for cooldown
+Waiting 15000ms before transaction 
+Executing transaction sOHM.initialize()...
+Transaction executed. Waiting 5000ms for cooldown
+Waiting 15000ms before transaction 
+Executing transaction sOHM.setIndex()...
+Transaction executed. Waiting 5000ms for cooldown
+Waiting 15000ms before transaction 
+Executing transaction staking.setContract(0)...
+Transaction executed. Waiting 5000ms for cooldown
+Waiting 15000ms before transaction 
+Executing transaction staking.setContract(1)...
+Transaction executed. Waiting 5000ms for cooldown
+Waiting 15000ms before transaction 
+Executing transaction ohm.setVault()...
+Transaction executed. Waiting 5000ms for cooldown
+Waiting 15000ms before transaction 
+Executing transaction distributor.addRecipient()...
+Transaction executed. Waiting 5000ms for cooldown
+Waiting 15000ms before transaction 
+Executing transaction treasury.queue(8)...
+Transaction executed. Waiting 5000ms for cooldown
+Waiting 15000ms before transaction 
+Executing transaction treasury.toogle(8)...
+Transaction executed. Waiting 5000ms for cooldown
+Waiting 15000ms before transaction 
+Executing transaction treasury.queue(0)...
+Transaction executed. Waiting 5000ms for cooldown
+Waiting 15000ms before transaction 
+Executing transaction treasury.toogle(0)...
+Transaction executed. Waiting 5000ms for cooldown
+Waiting 15000ms before transaction 
+Executing transaction treasury.queue(4)...
+Transaction executed. Waiting 5000ms for cooldown
+Waiting 15000ms before transaction 
+Executing transaction treasury.toogle(4)...
+Transaction executed. Waiting 5000ms for cooldown
+Waiting 15000ms before transaction 
+Executing transaction dai.approve()...
+Transaction executed. Waiting 5000ms for cooldown
+Waiting 15000ms before transaction 
+Executing transaction frax.approve()...
+Transaction executed. Waiting 5000ms for cooldown
+Waiting 15000ms before transaction 
+Executing transaction dai.approve(dai)...
+Transaction executed. Waiting 5000ms for cooldown
+Waiting 15000ms before transaction 
+Executing transaction frax.approve(frax)...
+Transaction executed. Waiting 5000ms for cooldown
+Waiting 15000ms before transaction 
+Executing transaction ohm.approve(staking)...
+Transaction executed. Waiting 5000ms for cooldown
+Waiting 15000ms before transaction 
+Executing transaction ohm.approve(stakingHelper)...
+Transaction executed. Waiting 5000ms for cooldown
+Waiting 15000ms before transaction 
+Executing transaction treasury.deposit(9e24)...
+Transaction executed. Waiting 5000ms for cooldown
+Waiting 15000ms before transaction 
+Executing transaction treasury.deposit(5e24)...
+Transaction executed. Waiting 5000ms for cooldown
+Waiting 15000ms before transaction 
+Executing transaction stakingHelper.stake()...
+Transaction executed. Waiting 5000ms for cooldown
+Waiting 15000ms before transaction 
+Executing transaction daiBond.deposit()...
+Transaction executed. Waiting 5000ms for cooldown
+Waiting 15000ms before transaction 
+Executing transaction fraxBond.deposit()...
+Transaction executed. Waiting 5000ms for cooldown
+OHM: 0x8627fF590930F4311dEF2b71169d9825A01D18Fb
+DAI: 0xE10Be81C121fc5E9CFfFBfA2A3589a96021bD346
+Frax: 0x99076ca7b1E2B182fCeBA3d9FEccBF44742267bb
+Treasury: 0x7307F7C6529fFD030211df227A2672540BC59962
+Calc: 0x8C8767a341B10c0e039dDE5cB6D428A1d1673BAb
+Staking: 0x56eCb0C2D7e1D0D7D0f79F4f97fd11F100Ed02D9
+sOHM: 0x9507dc07b7c460cd8ee8b8908F062a4bA9018569
+Distributor 0x1656C2A37A5335d327b665756f44852E3672F251
+Staking Warmup 0xB67Bb47A3fF2e49FE400E40dEDa01442Cfa62924
+Staking Helper 0x4D98350dbff0D57aC36fA5F1A3668C9474A600a4
+DAI Bond: 0x412131331282B0F3F6eC32Be6b3053daE83C7DaF
+Frax Bond: 0xf166Aa9dA66403430027eb2D069F74F80961f655
+Done in 2667.05s.
