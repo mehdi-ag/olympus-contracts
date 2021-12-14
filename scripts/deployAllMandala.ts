@@ -6,7 +6,7 @@
 import { ethers } from 'hardhat';
 import { calcEthereumTransactionParams } from '@acala-network/eth-providers';
 import { Contract } from 'ethers';
-
+import { writeFileSync, existsSync, readFileSync } from 'fs';
 const txFeePerGas = '199999946752';
 const storageByteDeposit = '100000000000000';
 async function main() {
@@ -196,6 +196,24 @@ async function main() {
     console.log("Staking Helper " + stakingHelper.address);
     console.log("DAI Bond: " + daiBond.address);
     console.log("Frax Bond: " + fraxBond.address);
+
+    const deployedContracts = {
+        OHM: ohm.address,
+        DAI: dai.address,
+        FRX: frax.address,
+        Treasury: treasury.address,
+        Calc: olympusBondingCalculator.address,
+        Staking: staking.address,
+        sOHM: sOHM.address,
+        Distributor: distributor.address,
+        StakingWarmup: stakingWarmup.address,
+        StakingHelper: stakingHelper.address,
+        DAIBond: daiBond.address,
+        FRXBond: fraxBond.address
+    };
+
+    writeFileSync('mandala_deployedContracts.json', JSON.stringify(deployedContracts));
+
 }
 
 // We recommend this pattern to be able to use async/await everywhere

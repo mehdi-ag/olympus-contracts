@@ -22,6 +22,10 @@ task('accounts', 'Prints the list of accounts', async (taskArgs, hre) => {
 const config: HardhatUserConfig = {
   solidity: "0.7.5",
   networks: {
+    ganache:{
+      url: "http://localhost:8545",
+      chainId: 1337
+    },
     mandala: {
       url: 'http://localhost:8545',
       chainId: 595,

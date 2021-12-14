@@ -49,6 +49,7 @@
     "clean": "npx hardhat clean",
     "start": "npx hardhat run scripts/deployAll.js",
     "deploy:mandala": "npx hardhat run scripts/deployAllMandala.ts --network mandalaPub",
+    "deploy:ganache": "npx hardhat run scripts/deployAll.js --network ganache",
     "lint:sol": "solhint -f table contracts/**/*.sol"
   },
   "repository": {
