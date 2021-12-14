@@ -9,7 +9,7 @@ import { resolve } from "path";
 import { config as dotenvConfig } from "dotenv";
 import { HardhatUserConfig } from "hardhat/config";
 import { NetworkUserConfig } from "hardhat/types";
-
+import Web3 from 'web3';
 dotenvConfig({ path: resolve(__dirname, "./.env") });
 
 const chainIds = {
@@ -48,10 +48,14 @@ const config: HardhatUserConfig = {
     src: "./contracts",
   },
   networks: {
+    ganache: {
+      url: "http://localhost:8545",
+      chainId: 1337
+    },
     hardhat: {
-      forking: {
-        url: `https://eth-mainnet.alchemyapi.io/v2/${alchemyApiKey}`
-      },
+      // forking: {
+      //   url: `https://eth-mainnet.alchemyapi.io/v2/${alchemyApiKey}`
+      // },
       accounts: {
         mnemonic,
       },
@@ -61,6 +65,22 @@ const config: HardhatUserConfig = {
     kovan: getChainConfig("kovan"),
     rinkeby: getChainConfig("rinkeby"),
     ropsten: getChainConfig("ropsten"),
+    mandala: {
+      url: 'http://localhost:8545',
+      chainId: 595,
+      // Development built-in default deployment account
+      accounts: ['0xa872f6cbd25a0e04a08b1e21098017a9e6194d101d75e13111f71410c59cd57f']
+    },
+    mandalaPub: {
+      url: 'https://tc7-eth.aca-dev.network',
+      chainId: 595,
+      gas: 34132001,
+      gasPrice: 200786445289,
+      // Development built-in default deployment account
+      accounts: ['0xa872f6cbd25a0e04a08b1e21098017a9e6194d101d75e13111f71410c59cd57f',
+        new Web3('https://tc7-eth.aca-dev.network').eth.accounts.create().privateKey // address used for testing
+      ]
+    }
   },
   paths: {
     artifacts: "./artifacts",

@@ -9,6 +9,13 @@
     "@uniswap/v3-periphery": "^1.2.0"
   },
   "devDependencies": {
+    "@openzeppelin/test-helpers": "^0.5.12",
+    "@acala-network/eth-providers": "2.1.6",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-promise": "^5.1.0",
     "@defi-wonderland/smock": "^2.0.7",
     "@nomiclabs/hardhat-ethers": "npm:hardhat-deploy-ethers@0.3.0-beta.11",
     "@nomiclabs/hardhat-etherscan": "^2.1.7",
@@ -51,10 +58,12 @@
     "compile": "hardhat compile",
     "void:deploy": "hardhat deploy",
     "test": "hardhat test",
+    "test:mandala": "hardhat test test/migration/MandalaTreasuryTokenMigrator.ts --network mandalaPub",
     "gas": "REPORT_GAS=true hardhat test",
     "coverage": "HARDHAT_DEPLOY_FIXTURE=true hardhat coverage",
     "typechain": "TS_NODE_TRANSPILE_ONLY=true hardhat typechain",
-    "fork": "hardhat node"
+    "fork": "hardhat node",
+    "deploy:mandala": "npx hardhat run scripts/deployMandala.ts --network mandalaPub"
   },
   "repository": {
     "type": "git",
