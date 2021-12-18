@@ -32,7 +32,7 @@ async function main() {
     const uniRouter = await deployAndWait('TestUniswapV2Router', [gasConfig]);
     newDeployedContracts.uniRouter = uniRouter.address;
 
-    const migrator = await deployAndWait('OlympusTokenMigrator', [OHM, sOHM, Treasury, Staking, wsOHM, sushiRouter.address, uniRouter.address, '0', authority.address, gasConfig4]);
+    const migrator = await deployAndWait('OlympusTokenMigrator', [OHM, sOHM, Treasury, Staking, wsOHM.address, sushiRouter.address, uniRouter.address, '0', authority.address, gasConfig4]);
     newDeployedContracts.migrator = migrator.address;
 
     const gOHM = await deployAndWait('gOHM', [migrator.address, sOHM, gasConfig]);
